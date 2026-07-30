@@ -12,6 +12,13 @@ app.use(express.json());
 app.use("/", courseRoutes);
 app.use("/", assignmentRoutes);
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Study Planner API is running!"
+  });
+});
+
 app.listen(5000, () => {
     console.log("Server running...");
 });
