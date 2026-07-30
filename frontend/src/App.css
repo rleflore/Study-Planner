@@ -1,0 +1,198 @@
+.priority-card {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 2px solid var(--course-color);
+  border-left-width: 8px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 8%);
+}
+
+.priority-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priority-card-title {
+  margin: 12px 0 18px;
+  font-size: 1.1rem;
+}
+
+.priority-card-due {
+  margin: 0;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.form-action-button {
+  padding: 10px 18px;
+  border: 2px solid #495057;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #343a40;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-action-button:hover {
+  background-color: #495057;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.assignment-button {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.assignment-button:hover {
+  background-color: #212529;
+}
+
+.collapsible-form {
+  margin-bottom: 24px;
+}
+
+.panel-heading {
+  margin-bottom: 18px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.priority-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.priority-task-card {
+  position: relative;
+  min-height: 90px;
+  padding: 7px 18px;
+  border: 5px solid var(--course-color);
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.priority-task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgb(0 0 0 / 12%);
+}
+
+.priority-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.priority-course-code {
+  color: var(--course-color);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.priority-checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--course-color);
+}
+
+.priority-assignment-title {
+  margin: 14px 0 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.priority-due-date {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.completed-task-card {
+  background-color: #f8f9fa;
+  opacity: 0.75;
+}
+
+.completed-task-card .priority-assignment-title {
+  text-decoration: line-through;
+}
+
+.empty-panel-message {
+  margin: 0;
+  padding: 24px 12px;
+  color: #6c757d;
+  text-align: center;
+}
+.course-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.course-list-item:last-child {
+  border-bottom: none;
+}
+
+.course-list-information {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course-color-dot {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--course-color);
+}
+
+.assignment-type-icon {
+  position: absolute;
+  top: -20px;
+  right: 60px;
+  width: 50px;
+  height: 50px;
+  padding: 3px;
+  object-fit: contain;
+  border: 3px solid var(--course-color);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.priority-notes {
+  margin: 0 0 16px;
+  color: #6c757d;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
