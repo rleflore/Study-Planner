@@ -16,7 +16,7 @@ function CourseForm({ courses, onCourseAdded }) {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/courses", {
+            const response = await fetch(`${API_URL}/courses`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -43,8 +43,8 @@ function AssignmentForm({ courses, onAssignmentAdded, assignmentToEdit, onAssign
             const editing = Boolean(assignmentToEdit);
 
             const url = editing
-                ? `http://localhost:5000/assignments/${assignmentToEdit._id}`
-                : "http://localhost:5000/assignments";
+                ? `${API_URL}/assignments/${assignmentToEdit._id}`
+                : `${API_URL}/assignments`;
 
             const response = await fetch(url, {
                 method: editing ? "PUT" : "POST",
