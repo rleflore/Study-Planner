@@ -1,15 +1,19 @@
+require("dotenv").config();
 var express = require("express");
 var router = express.Router();
 const mongoose = require("mongoose");
 const Assignment = require("../schema/Assignment");
 const Course = require("../schema/Course");
 
-const dbRoute =
-    "mongodb+srv://rleflore_db_user:metJHgK8i4cmCAq4@cluster0.ezl8xjb.mongodb.net/?appName=Cluster0";
-    
-mongoose.connect(dbRoute, {
-    dbName: "studyPlanner"
-});
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("MongoDB connected successfully");
+  })
+  .catch(error => {
+    console.error("MongoDB connection error:", error);
+    process.exit(1);
+  });
 
 let db = mongoose.connection;
 
