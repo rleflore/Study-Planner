@@ -1,4 +1,5 @@
 import { useState } from "react";
+import API_URL from "../api";
 
 function CourseForm({ courses, onCourseAdded }) {
     const [courseName, setCourseName] = useState("");
