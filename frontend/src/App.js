@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import API_URL from "../api";
 import AssignmentTable from "./components/AssignmentTable";
 import CourseForm from "./components/CourseForm";
 import AssignmentForm from "./components/AssignmentForm";
@@ -21,7 +22,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch(`${API_URL}/courses`)
       .then(response => response.json())
       .then(data => {
         console.log("Courses from backend:", data);
@@ -33,7 +34,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/assignments")
+    fetch(`${API_URL}/assignments`)
       .then(response => response.json())
       .then(data => {
         console.log("assignments from backend:", data);
@@ -92,7 +93,7 @@ function App() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/assignments/${id}`,
+      const response = await fetch(`${API_URL}/assignments/${id}`,
         {
           method: "DELETE"
         });
@@ -125,7 +126,7 @@ function App() {
 
     try {
         const response = await fetch(
-            `http://localhost:5000/courses/${id}`,
+            `${API_URL}/courses/${id}`,
             {
                 method: "DELETE"
             }
@@ -216,7 +217,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/assignments/${assignment._id}`,
+        `${API_URL}/assignments/${assignment._id}`,
         {
           method: "PUT",
           headers: {
@@ -255,7 +256,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/assignments/completed",
+        `${API_URL}/assignments/completed`,
         {
           method: "DELETE"
         }
